@@ -90,9 +90,30 @@
     }
 }
 
+.action {
+    display: flex;
+    align-items: center;
+}
+
 .more-btn {
     font-size: 2rem;
     margin-left: 6px;
     padding: 10px;
     background-color: transparent;
+}
+
+.action-btn {
+    color: #161823;
+    font-size: 2rem;
+    background-color: #fff;
+    padding: 4px 12px;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-left: 12px;
+    cursor: pointer;
 }

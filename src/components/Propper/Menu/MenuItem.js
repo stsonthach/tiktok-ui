@@ -5,8 +5,12 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 function MenuItem({ data, onClick }) {
+    const classes = cx('menu-item', {
+        separate: data.separate,
+    });
+
     return (
-        <Button className={cx('menu-item')} icon={data.icon} onClick={onClick}>
+        <Button className={classes} icon={data.icon} onClick={onClick}>
             {data.title}
         </Button>
     );

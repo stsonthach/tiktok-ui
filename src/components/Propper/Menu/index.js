@@ -36,6 +36,7 @@ function Menu({ children, items, onChange = handleDefalt }) {
 
     return (
         <Tippy
+            onHidden={() => setHistory((prev) => prev.slice(0, 1))}
             interactive={true}
             delay={[0, 500]}
             placement="bottom-end"
