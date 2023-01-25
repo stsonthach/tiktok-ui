@@ -28,6 +28,8 @@ import images from '~/assets/images';
 import { Wrapper as PropperWrapper } from '~/components/Propper';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Propper/Menu';
+import Image from '~/components/Image';
+import { MessageIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
@@ -155,9 +157,11 @@ function Header() {
                                     <FontAwesomeIcon className={cx('action-btn')} icon={faCloudUpload} />
                                 </button>
                             </Tippy>
-                            <button>
-                                <FontAwesomeIcon className={cx('action-btn')} icon={faMessage} />
-                            </button>
+                            <Tippy delay={(0, 200)} content="Message">
+                                <button>
+                                    <FontAwesomeIcon className={cx('action-btn')} icon={faMessage} />
+                                </button>
+                            </Tippy>
                         </>
                     ) : (
                         <>
@@ -169,11 +173,11 @@ function Header() {
                     )}
                     <Menu items={current ? MENU_USER : MENU_ITEMS} onChange={handleMenuChange}>
                         {current ? (
-                            <img
+                            <Image
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/31eff1af635f447c58ba0de5c7bf912e~c5_100x100.jpeg?x-expires=1674820800&x-signature=QpI%2BCQoJXNARMcRZN4rzPTPRBSE%3D"
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
-                            ></img>
+                            ></Image>
                         ) : (
                             <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
