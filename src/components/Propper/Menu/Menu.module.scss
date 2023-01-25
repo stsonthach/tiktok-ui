@@ -1,0 +1,18 @@
+.content {
+    width: 224px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .menu-item {
+        margin-left: 0;
+    }
+}
+
+.menu-item {
+    width: 100%;
+    display: flex;
+    padding: 10px 16px;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
