@@ -4,9 +4,9 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-function MenuItem({ data }) {
+function MenuItem({ data, onClick }) {
     return (
-        <Button className={cx('menu-item')} icon={data.icon}>
+        <Button className={cx('menu-item')} icon={data.icon} onClick={onClick}>
             {data.title}
         </Button>
     );
