@@ -3,7 +3,12 @@
     --search-height: 46px;
     --search-top-spacer: 9px;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
     width: 100%;
+    background-color: var(--white);
     height: var(--default-layout-height);
     box-shadow: rgb(0 0 0 / 12%) 0px 1px 1px;
     display: flex;

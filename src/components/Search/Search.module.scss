@@ -17,6 +17,7 @@
         color: var(--black);
         font-size: 1.6rem;
         padding: 12px 0px;
+        padding-right: 40px;
         background-color: transparent;
     }
 
@@ -53,6 +54,19 @@
     right: 70px;
     transform: translateY(-50%);
     color: rgba(22, 24, 35, 0.34);
+}
+
+.loading {
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
 }
 
 .search-btn {

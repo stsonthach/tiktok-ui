@@ -11,10 +11,6 @@ import {
     faKeyboard,
     faSignIn,
     faUser,
-    faCircleXmark,
-    faMagnifyingGlass,
-    faMessage,
-    faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
 
 import Tippy from '@tippyjs/react';
@@ -27,6 +23,7 @@ import Menu from '~/components/Propper/Menu';
 import Image from '~/components/Image';
 import { Inbox, MessageIcon } from '~/components/Icons';
 import Search from '~/components/Search';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -107,7 +104,9 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={images.logo.default} alt="tiktok" />
+                    <Link to="/">
+                        <img src={images.logo.default} alt="tiktok" />
+                    </Link>
                 </div>
                 {/* search */}
                 <Search />
